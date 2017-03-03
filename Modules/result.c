@@ -87,6 +87,7 @@ get_entry(LDAP *ldap, LDAPMessage *msg)
 			ber_memfree(bvals);
 		}
 	}
+	Py_XDECREF(values);
 
 	if (ber != NULL)
 		ber_free(ber, 0);
